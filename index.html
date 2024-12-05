@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskrit Wordscape</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <audio id="correctAudio" src="assests/correct.mp3"></audio>
+    <audio id="wrongAudio" src="assests/wrong.mp3"></audio>
+
+    <div class="score-board">
+        <div class="score-left">
+            <h2>Level: <span id="level">1</span></h2>
+        </div>
+        <div class="score-center">
+            <h2>Time Left: <span id="timer">60</span>s</h2>
+        </div>
+        <div class="score-right">
+            <h2>Score: <span id="score">0</span></h2>
+        </div>
+    </div>    
+
+    <div id="word-grid" class="word-grid"></div>    
+    
+    <div id="word-board" class="word-board"></div>
+
+    <button id="hint-button" class="hint-btn">Hint</button>
+    
+    <button id="clear-word" class="clear-word-btn">Clear</button>
+
+    <div id="formed-words">
+        <ul id="words-list"></ul>
+    </div> 
+
+    <div id="letter-tiles" class="tiles-container"></div>
+
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Rules</h2>
+            <ul>
+                <li>Form words from the letter tiles.</li>
+                <li>Correct word will automatically added in word grid.</li>
+                <li>Click on a formed word in the word grid to view its image.</li>
+                <li>Each correct word will earn you <b>10</b> points and <b>5</b> seconds.</li>
+                <li>The hint costs you 5 scores.</li>
+                <li>Good luck and have fun!</li>
+            </ul>
+            <button id="start-game-button" class="start-game-button">Start Game</button>
+            <br><br>
+            <div> Developed by :- <strong>Jaskaran Singh</strong> </div>
+        </div>
+    </div>
+
+    <div id="level-completion-modal" class="modal">
+        <div class="modal-content">
+            <h2>Level Completed!</h2>
+            <p>Congratulations! You've completed this level.</p>
+            <p><b>Your Score: </b><span id="score-in-modal">0</span></p>
+            <button id="next-level-button" class="next-level-button">Next Level</button>
+        </div>
+    </div>
+
+    <div id="time-up-modal" class="modal">
+        <div class="modal-content">
+          <h2>Time's Up!</h2>
+          <p>Your Score: <span id="final-score"></span></p>
+          <button id="play-again-button" class="play-again-button">Play Again</button>
+        </div>
+      </div>      
+
+    <script src="script.js"></script>
+</body>
+</html>
